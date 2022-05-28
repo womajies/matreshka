@@ -1,0 +1,32 @@
+// Colors
+$white-color: #ffffff;
+$black-color: #262626;
+$dark-color: #8E8A8A;
+$light-color: #F7F8FC;
+$secondary-color: #E6676E;
+$primary-color: #5065A9;
+$primary-hover: #93A5E0;
+$primary-selected: #3C4C7F;
+$primary-disabled: #C2C2C2;
+
+// Breakpoints
+// min-width
+$desktopM: 2560px;
+$desktopS: 1920px;
+$desktop: 1680px;
+$laptopS: 1440px;
+$laptop: 1280px;
+$tabletS: 1024px;
+$tablet: 768px;
+$mobileS: 480px;
+$mobile: 375px;
+
+// max-width
+$desktopS__max: 2559px;
+$desktop__max: 1919px;
+$laptopS__max: 1679px;
+$laptop__max: 1439px;
+$tabletS__max: 1279px;
+$tablet__max: 1023px;
+$mobileS__max: 767px;
+$mobile__max: 479px;

@@ -1,0 +1,182 @@
+.faq {
+  &__container {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      bottom: -37px;
+      width: 284px;
+      height: 309px;
+      background-image: url('../img/faq-bg.svg');
+      background-position: right bottom;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      pointer-events: none;
+
+      @media (min-width: $tablet) {
+        width: 375px;
+        height: 364px;
+        bottom: 0;
+        right: 26px;
+        background-image: url('../img/faq-bg-tablet.svg');
+      }
+
+      @media (min-width: $laptop) {
+        background-image: url('../img/faq-bg-desk.svg');
+        width: 445px;
+        height: 100%;
+        bottom: -16px;
+        right: 33px;
+      }
+    }
+  }
+
+
+  &__wrapper {
+    padding: 24px 16px 120px 3px;
+    position: relative;
+
+    @media (min-width: $tablet) {
+      padding: 32px 48px 45px 0;
+    }
+
+    @media (min-width: $laptop) {
+      padding: 24px 86px 16px 48px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 14px;
+      width: 2px;
+      height: calc(100% - 211px);
+      background-color: $secondary-color;
+
+      @media (min-width: $tablet) {
+        width: 3px;
+        right: 46px;
+      }
+
+      @media (min-width: $laptop) {
+        width: 4px;
+        right: 69px;
+        height: calc(100% - 195px);
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      left: -16px;
+      width: 80%;
+      height: 2px;
+      background-color: $secondary-color;
+
+      @media (min-width: $tablet) {
+        left: 0;
+        height: 3px;
+      }
+
+      @media (min-width: $laptop) {
+        height: 4px;
+      }
+    }
+  }
+}
+
+.accordion__control {
+	width: 100%;
+	background-color: transparent;
+	cursor: pointer;
+
+  &:hover, &:focus {
+    .accordion__title {
+      color: $secondary-color;
+    }
+
+    .accordion__icon {
+      fill: $secondary-color;
+    }
+  }
+}
+
+
+.accordion__content {
+  max-height: 0;
+  padding-top: 4px;
+  padding-right: 5px;
+	opacity: 0;
+	overflow: hidden;
+	will-change: max-height;
+	transition: all 0.3s ease-out;
+	box-sizing: content-box;
+  visibility: hidden;
+}
+
+.accordion__icon {
+  fill: $black-color;
+	transition: transform 0.3s ease-out, fill 0.3s ease-out;
+}
+
+.open .accordion__icon {
+	transform: rotate(180deg);
+}
+
+.open .accordion__content {
+	opacity: 1;
+  visibility: visible;
+}
+
+.accordion {
+	margin-top: 16px;
+}
+
+.accordion__control {
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+.accordion__control::-webkit-details-marker {
+	display: none;
+}
+
+.accordion__title {
+	font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin-right: 8px;
+  color: $black-color;
+  transition: 0.3s ease-in color;
+
+  @media (min-width: $mobile) {
+    margin-right: 24px;
+  }
+}
+
+.instr {
+  list-style: disc;
+  padding-left: 22px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+
+  &__item {
+    color: $dark-color;
+  }
+}
+
+.accordion__descr {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: $black-color;
+  margin-top: 24px;
+}

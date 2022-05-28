@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <!-- <link rel="shortcut icon" href="@img/favicons/favicon.ico" type="image/x-icon"> -->
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <title>Матрешка</title>
+</head>
+<body>
+  <div class="layout">
+    <header class="header">
+      <div class="container header__container">
+        <button class="burger btn-reset" aria-label="Меню">
+          <div class="burger__lines">
+              <div class="burger__line"></div>
+              <div class="burger__line"></div>
+              <div class="burger__line"></div>
+          </div>
+        </button>
+        <a href="/" class="header__logo" title="Главная">
+          <svg width="16" height="24" class="header__logo-icon">
+            <use xlink:href="@img/sprites/sprite.svg#logo"></use>
+          </svg>
+          <svg width="136" height="34" class="header__logo-text">
+            <use xlink:href="@img/sprites/sprite.svg#logo-text"></use>
+          </svg>
+        </a>
+        <form action="/results" class="header__form search">
+          <svg class="search__icon" width="14" height="14">
+            <use xlink:href="@img/sprites/sprite.svg#search"></use>
+          </svg>
+          <input id="search" class="search__field" autocapitalize="none" autocomplete="off" autocorrect="off" name="search_query" tabindex="0" type="search" placeholder="Поиск" aria-label="Введите запрос">
+          <button class="search__mic" type="button" aria-label="Голосовой поиск" title="Голосовой поиск">
+            <svg width="18" height="18">
+              <use xlink:href="@img/sprites/sprite.svg#mic"></use>
+            </svg>
+          </button>
+        </form>
+        <div class="cta">
+          <div class="actions">
+            <button class="actions__search" aria-label="Поиск" title="Поиск">
+              <svg width="19" height="19">
+                <use xlink:href="@img/sprites/sprite.svg#search"></use>
+              </svg>
+            </button>
+            <button class="actions__more" aria-label="Ещё" title="Ещё">
+              <svg width="16" height="4">
+                <use xlink:href="@img/sprites/sprite.svg#more"></use>
+              </svg>
+            </button>
+            <button class="actions__news" aria-label="Новости" title="Открыть новости">
+              <svg width="24" height="24">
+                <use xlink:href="@img/sprites/sprite.svg#news"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="account">
+            <button class="account__user" aria-label="Профиль" title="Открыть профиль">
+              <picture>
+                <source srcset="@img/user.webp, @img/user@2x.webp 1.5x" type="image/webp">
+                <img src="@img/user.jpg" srcset="@img/user@2x.jpg 1.5x" alt="Фото профиля">
+              </picture>
+            </button>
+            <button class="account__signin" aria-label="Войти" title="Войти в аккаунт">
+              <svg width="12" height="18">
+                <use xlink:href="@img/sprites/sprite.svg#logo"></use>
+              </svg>
+              <span>Войти</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="authors">
+        <div class="container authors__container">
+          <div class="authors__content">
+            <h1 class="authors__title">Авторам</h1>
+            <h3 class="authors__subtitle">Творите, а мы поможем в становлении</h3>
+            <p class="authors__text">Рекомендации и полезная информация помогут понять как все устроено</p>
+          </div>
+          <div class="authors__promo">
+            <picture>
+              <source data-srcset="@img/authors-bg-desk.webp, @img/authors-bg-desk@2x.webp 1.5x" type="image/webp" media="(min-width: 1280px)">
+              <source data-srcset="@img/authors-bg-desk.jpg 1x, @img/authors-bg-desk@2x.jpg 1.5x" type="image/jpeg" media="(min-width: 1280px)">
+              <source data-srcset="@img/authors-bg-tablet.webp, @img/authors-bg-tablet@2x.webp 1.5x" type="image/webp" media="(min-width: 768px)">
+              <source data-srcset="@img/authors-bg-tablet.jpg 1x, @img/authors-bg-tablet@2x.jpg 1.5x" type="image/jpeg" media="(min-width: 768px)">
+              <source data-srcset="@img/authors-bg.webp, @img/authors-bg@2x.webp 1.5x" type="image/webp">
+              <img data-src="@img/authors-bg.jpg" data-srcset="@img/authors-bg@2x.jpg 1.5x" alt="Картинка. Люди в офисе и ноутбук">
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="container about__container">
+          <div class="about__wrapper">
+            <ul class="about__wrapper-groups">
+              <li class="about__category">
+                <h2 class="title about__title">Сообщество</h2>
+                <ul class="about__list">
+                  <li class="about__item">
+                    <svg width="24" height="24">
+                      <use xlink:href="@img/sprites/sprite.svg#about-icon-1"></use>
+                    </svg>
+                    Правила
+                  </li>
+                  <li class="about__item">
+                    <svg width="24" height="24">
+                      <use xlink:href="@img/sprites/sprite.svg#about-icon-2"></use>
+                    </svg>
+                    Программы
+                  </li>
+                </ul>
+              </li>
+              <li class="about__category">
+                <h2 class="title about__title">Канал</h2>
+                <ul class="about__list">
+                  <li class="about__item">
+                    <svg width="24" height="24">
+                      <use xlink:href="@img/sprites/sprite.svg#about-icon-3"></use>
+                    </svg>
+                    Инструменты
+                  </li>
+                  <li class="about__item">
+                    <svg width="24" height="24">
+                      <use xlink:href="@img/sprites/sprite.svg#about-icon-4"></use>
+                    </svg>
+                    Инструкции
+                  </li>
+                </ul>
+              </li>
+              <li class="about__category">
+                <h2 class="title about__title">Контент</h2>
+                <ul class="about__list">
+                  <li class="about__item">
+                    <svg width="24" height="24">
+                      <use xlink:href="@img/sprites/sprite.svg#about-icon-5"></use>
+                    </svg>
+                    Советы
+                  </li>
+                  <li class="about__item">
+                    <svg width="24" height="24">
+                      <use xlink:href="@img/sprites/sprite.svg#about-icon-6"></use>
+                    </svg>
+                    Монетизация
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="container faq__container">
+          <div class="faq__wrapper">
+            <h2 class="title faq__title">Частые вопросы</h2>
+
+            <ul class="accordion__list">
+              <li class="accordion">
+                <button class="accordion__control" aria-expanded="false">
+                  <span class="accordion__title">Как создать канал</span>
+                  <svg class="accordion__icon" width="24" height="24">
+                    <use xlink:href="@img/sprites/sprite.svg#arrow-down"></use>
+                  </svg>
+                </button>
+                <div class="accordion__content" aria-hidden="true">
+                  <ul class="accordion__instr instr">
+                    <li class="instr__item">Войдите на&nbsp;аккаунт</li>
+                    <li class="instr__item">Перейдите на&nbsp;вкладку Каналы через иконку пользователя и&nbsp;создайте канал</li>
+                    <li class="instr__item">Далее загрузите ваше первое видео&nbsp;&mdash; в&nbsp;меню выберите Творческую студию и&nbsp;нажмите</li>
+                    <li class="instr__item">&laquo;Загрузить видео&raquo;</li>
+                    <li class="instr__item">Заполните все необходимые поля и&nbsp;по&nbsp;окончании нажмите кнопку &laquo;Сохранить&raquo;</li>
+                  </ul>
+                  <p class="accordion__descr">
+                    Поздравляем вы&nbsp;создали новый канал и&nbsp;опубликовали ваше первое видео!
+                  </p>
+                  <a href="#" class="accordion__link link">Полный список вопросов</a>
+                </div>
+              </li>
+              <li class="accordion">
+                <button class="accordion__control" aria-expanded="false">
+                  <span class="accordion__title">Как привлечь аудиторию</span>
+                  <svg class="accordion__icon" width="24" height="24">
+                    <use xlink:href="@img/sprites/sprite.svg#arrow-down"></use>
+                  </svg>
+                </button>
+                <div class="accordion__content" aria-hidden="true">
+                  <ul class="accordion__instr instr">
+                    <li class="instr__item">Войдите на&nbsp;аккаунт</li>
+                    <li class="instr__item">Перейдите на&nbsp;вкладку Каналы через иконку пользователя и&nbsp;создайте канал</li>
+                    <li class="instr__item">Далее загрузите ваше первое видео&nbsp;&mdash; в&nbsp;меню выберите Творческую студию и&nbsp;нажмите</li>
+                    <li class="instr__item">&laquo;Загрузить видео&raquo;</li>
+                    <li class="instr__item">Заполните все необходимые поля и&nbsp;по&nbsp;окончании нажмите кнопку &laquo;Сохранить&raquo;</li>
+                  </ul>
+                  <p class="accordion__descr">
+                    Поздравляем вы&nbsp;создали новый канал и&nbsp;опубликовали ваше первое видео!
+                  </p>
+                  <a href="#" class="accordion__link link">Полный список вопросов</a>
+                </div>
+              </li>
+              <li class="accordion">
+                <button class="accordion__control" aria-expanded="false">
+                  <span class="accordion__title">Как работает монетизация</span>
+                  <svg class="accordion__icon" width="24" height="24">
+                    <use xlink:href="@img/sprites/sprite.svg#arrow-down"></use>
+                  </svg>
+                </button>
+                <div class="accordion__content" aria-hidden="true">
+                  <ul class="accordion__instr instr">
+                    <li class="instr__item">Войдите на&nbsp;аккаунт</li>
+                    <li class="instr__item">Перейдите на&nbsp;вкладку Каналы через иконку пользователя и&nbsp;создайте канал</li>
+                    <li class="instr__item">Далее загрузите ваше первое видео&nbsp;&mdash; в&nbsp;меню выберите Творческую студию и&nbsp;нажмите</li>
+                    <li class="instr__item">&laquo;Загрузить видео&raquo;</li>
+                    <li class="instr__item">Заполните все необходимые поля и&nbsp;по&nbsp;окончании нажмите кнопку &laquo;Сохранить&raquo;</li>
+                  </ul>
+                  <p class="accordion__descr">
+                    Поздравляем вы&nbsp;создали новый канал и&nbsp;опубликовали ваше первое видео!
+                  </p>
+                  <a href="#" class="accordion__link link">Полный список вопросов</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="container features__container">
+          <ul class="features__list">
+            <li class="features__item">
+              <div class="features__img">
+                <picture>
+                  <source data-srcset="@img/features-1-desk.webp, @img/features-1-desk@2x.webp 1.5x" type="image/webp" media="(min-width: 1280px)">
+                  <source data-srcset="@img/features-1-desk.jpg 1x, @img/features-1-desk@2x.jpg 1.5x" type="image/jpeg" media="(min-width: 1280px)">
+                  <source data-srcset="@img/features-1-tablet.webp, @img/features-1-tablet@2x.webp 1.5x" type="image/webp" media="(min-width: 768px)">
+                  <source data-srcset="@img/features-1-tablet.jpg 1x, @img/features-1-tablet@2x.jpg 1.5x" type="image/jpeg" media="(min-width: 768px)">
+                  <source data-srcset="@img/features-1.webp, @img/features-1@2x.webp 1.5x" type="image/webp">
+                  <img data-src="@img/features-1.jpg" data-srcset="@img/features-1@2x.jpg 1.5x" alt="Картинка. Группа людей указывает на монитор">
+                </picture>
+              </div>
+              <div class="features__item-wrapper">
+                <h4 class="features__title">Полезные материалы</h4>
+                <p class="features__descr">Популярные авторы делятся историями своего успеха</p>
+                <a href="#" class="features__link link">
+                  <span>Подробнее</span>
+                  <svg width="20" height="20">
+                    <use xlink:href="@img/sprites/sprite-noattr.svg#arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+            </li>
+            <li class="features__item">
+              <div class="features__img">
+                <picture>
+                  <source data-srcset="@img/features-2-desk.webp, @img/features-2-desk@2x.webp 1.5x" type="image/webp" media="(min-width: 1280px)">
+                  <source data-srcset="@img/features-2-desk.jpg 1x, @img/features-2-desk@2x.jpg 1.5x" type="image/jpeg" media="(min-width: 1280px)">
+                  <source data-srcset="@img/features-2-tablet.webp, @img/features-2-tablet@2x.webp 1.5x" type="image/webp" media="(min-width: 768px)">
+                  <source data-srcset="@img/features-2-tablet.jpg 1x, @img/features-2-tablet@2x.jpg 1.5x" type="image/jpeg" media="(min-width: 768px)">
+                  <source data-srcset="@img/features-2.webp, @img/features-2@2x.webp 1.5x" type="image/webp">
+                  <img data-src="@img/features-2.jpg" data-srcset="@img/features-2@2x.jpg 1.5x" alt="Картинка. Группа людей собрали руки в кучу">
+                </picture>
+              </div>
+              <div class="features__item-wrapper">
+                <h4 class="features__title">Помощь</h4>
+                <p class="features__descr">Изучите актуальные темы на форуме сообщества или посетите Справочный центр</p>
+                <a href="#" class="features__link link">
+                  <span>Справочный центр</span>
+                  <svg width="20" height="20">
+                    <use xlink:href="@img/sprites/sprite-noattr.svg#arrow-right"></use>
+                  </svg>
+                </a>
+                <a href="#" class="features__link link">
+                  <span>Форум сообщества</span>
+                  <svg width="20" height="20">
+                    <use xlink:href="@img/sprites/sprite-noattr.svg#arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+            </li>
+            <li class="features__item">
+              <div class="features__img">
+                <picture>
+                  <source data-srcset="@img/features-3-desk.webp, @img/features-3-desk@2x.webp 1.5x" type="image/webp" media="(min-width: 1280px)">
+                  <source data-srcset="@img/features-3-desk.jpg 1x, @img/features-3-desk@2x.jpg 1.5x" type="image/jpeg" media="(min-width: 1280px)">
+                  <source data-srcset="@img/features-3-tablet.webp, @img/features-3-tablet@2x.webp 1.5x" type="image/webp" media="(min-width: 768px)">
+                  <source data-srcset="@img/features-3-tablet.jpg 1x, @img/features-3-tablet@2x.jpg 1.5x" type="image/jpeg" media="(min-width: 768px)">
+                  <source data-srcset="@img/features-3.webp, @img/features-3@2x.webp 1.5x" type="image/webp">
+                  <img data-src="@img/features-3.jpg" data-srcset="@img/features-3@2x.jpg 1.5x" alt="Картинка. Человек с телефоном">
+                </picture>
+              </div>
+              <div class="features__item-wrapper">
+                <h4 class="features__title">Обратная связь</h4>
+                <p class="features__descr">Следите за новостями в социальных сетях и задавайте интересующие вас вопросы</p>
+                <a href="#" class="features__link link">
+                  <span>ВКонтакте</span>
+                  <svg width="20" height="20">
+                    <use xlink:href="@img/sprites/sprite-noattr.svg#arrow-right"></use>
+                  </svg>
+                </a>
+                <a href="#" class="features__link link">
+                  <span>Телеграм</span>
+                  <svg width="20" height="20">
+                    <use xlink:href="@img/sprites/sprite-noattr.svg#arrow-right"></use>
+                  </svg>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"></footer>
+  </div>
+  <script src='js/main.min.js' type='module'></script>
+</body>
+</html>
